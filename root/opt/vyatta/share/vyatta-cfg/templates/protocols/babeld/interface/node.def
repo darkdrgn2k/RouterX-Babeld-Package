@@ -1,0 +1,5 @@
+multi:
+type: txt
+help: Find Babeld neighbours on this interface and list for updates
+
+create: ip link show dev $VAR(@)
