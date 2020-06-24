@@ -7,6 +7,15 @@ Project to create a working DEB package for BABELD to use on EdgeMax Router-x Ro
 - [ ] Create init.d files
 - [ ] Package into working DEB
 
+## Configs added
+    - denydefault
+    - denydefaultlocal
+    - interface
+    - local-port-readwrite
+    - redistribute
+        - interface
+            - local
+            
 ## Babeld Compile
 
 Following will compile a binary copy of babeld
