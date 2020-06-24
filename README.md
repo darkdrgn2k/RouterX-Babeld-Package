@@ -5,7 +5,7 @@ Project to create a working DEB package for BABELD to use on EdgeMax Router-x Ro
 
 - [ ] Create basic VyOS config 
 - [ ] Create init.d files
-- [ ] Pacakge into working DEB
+- [ ] Package into working DEB
 
 ## Babeld Compile
 
