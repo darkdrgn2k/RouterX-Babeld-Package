@@ -23,7 +23,6 @@ Project to create a working DEB package for BABELD to use on EdgeMax Router-x Ro
     - kernel-priority
     - local-path
     - local-path-readwrite
-    - node.def
     - protocol-group
     - protocol-port
     - random-id
