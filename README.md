@@ -11,6 +11,27 @@ Project to create a working DEB package for BABELD to use on EdgeMax Router-x Ro
     - denydefault
     - denydefaultlocal
     - interface
+    - allow-duplicates
+    - debug
+    - diversity-factor
+    - export-table
+    - first-rule-priority
+    - first-table-number
+    - import-table
+    - interface
+    - ipv6-subtrees
+    - kernel-priority
+    - local-path
+    - local-path-readwrite
+    - node.def
+    - protocol-group
+    - protocol-port
+    - random-id
+    - redistribute
+    - reflect-kernel-metric
+    - router-id
+    - skip-kernel-setup
+    - smoothing-half-life
     - local-port-readwrite
     - redistribute
         - interface
