@@ -1,10 +1,13 @@
 
 Project to create a working DEB package for BABELD to use on EdgeMax Router-x Routers
+# Current Usage
+
+TAR root directory then extract into / of edgerouter
 
 ## TODO
 
-- [ ] Create basic VyOS config 
-- [ ] Create init.d files
+- [x] Create basic VyOS config 
+- [x] Create init.d files
 - [ ] Package into working DEB
 
 ## Configs added
@@ -45,3 +48,4 @@ git clone git://github.com/jech/babeld.git
 cd babeld
 make CC='mipsel-linux-gnu-gcc -static'
 ```
+
