@@ -41,7 +41,9 @@ TAR root directory then extract into / of edgerouter
             
 ## Babeld Compile
 
-Following will compile a binary copy of babeld
+Following will compile a binary copy of babeld 
+Compiled binary exists in /root/usr/bin/babeld
+
 ```
 sudo apt-get install gcc-mipsel-linux-gnu
 git clone git://github.com/jech/babeld.git
