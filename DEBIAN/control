@@ -1,7 +1,7 @@
-Package: babekd
+Package: babeld
 Source: babeld
-Version: 0.0.1
-Architecture: mips
+Version: 1.9.2-1
+Architecture: mipsel
 Maintainer: darkdrgn2k
 Section: net
 Homepage: https://www.irif.fr/~jch/software/babel/
