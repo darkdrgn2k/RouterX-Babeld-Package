@@ -3,12 +3,14 @@ Project to create a working DEB package for BABELD to use on EdgeMax Router-x Ro
 # Current Usage
 
 TAR root directory then extract into / of edgerouter
+or 
+Install deb
 
 ## TODO
 
 - [x] Create basic VyOS config 
 - [x] Create init.d files
-- [ ] Package into working DEB
+- [x] Package into working DEB
 
 ## Configs added
     - denydefault
