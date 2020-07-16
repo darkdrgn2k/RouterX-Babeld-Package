@@ -65,6 +65,21 @@ sudo mkdir  -p /config/data/install-packages
     - export-table
     - first-rule-priority
     - first-table-number
+    - filter
+        - type (in,out,redistribute)
+        - action
+        - eq
+        - ge
+        - id
+        - if
+        - ip
+        - le
+        - local
+        - neigh
+        - proto
+        - src-eq
+        - src-ge
+        - src-ip
     - import-table
     - interface
         - channel
