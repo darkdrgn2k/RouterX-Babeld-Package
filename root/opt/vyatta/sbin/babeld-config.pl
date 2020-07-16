@@ -69,7 +69,27 @@ foreach my $int (@listen_interfaces) {
     $config_out .= "\n";
 }
 
+my @filters  = $c->listNodes('filter');
+foreach my $id (@filters) {
 
+    $config_out .= $c->returnValue("filter $id type") . " ";
+    if ($c->returnValue("filter $id ip") ne "" ) {$config_out .= "ip " . $c->returnValue("filter $id ip") . " ";}
+    if ($c->returnValue("filter $id eq") ne "" ) {$config_out .= "eq " . $c->returnValue("filter $id eq") . " ";}
+    if ($c->returnValue("filter $id le") ne "" ) {$config_out .= "le " . $c->returnValue("filter $id le") . " ";}
+    if ($c->returnValue("filter $id ge") ne "" ) {$config_out .= "ge " . $c->returnValue("filter $id ge") . " ";}
+    if ($c->returnValue("filter $id src-ip") ne "" ) {$config_out .= "src-ip " . $c->returnValue("filter $id src-ip") . " ";}
+    if ($c->returnValue("filter $id src-eq") ne "" ) {$config_out .= "src-eq " . $c->returnValue("filter $id src-eq") . " ";}
+    if ($c->returnValue("filter $id src-le") ne "" ) {$config_out .= "src-le " . $c->returnValue("filter $id src-le") . " ";}
+    if ($c->returnValue("filter $id src-ge") ne "" ) {$config_out .= "src-ge " . $c->returnValue("filter $id src-ge") . " ";}
+    if ($c->returnValue("filter $id neigh") ne "" ) {$config_out .= "neigh " . $c->returnValue("filter $id neigh") . " ";}
+    if ($c->returnValue("filter $id id") ne "" ) {$config_out .= "id " . $c->returnValue("filter $id id") . " ";}
+    if ($c->returnValue("filter $id proto") ne "" ) {$config_out .= "proto " . $c->returnValue("filter $id proto") . " ";}
+    if ($c->returnValue("filter $id local") eq "true" ) {$config_out .= "local ";}
+    if ($c->returnValue("filter $id if") ne "" ) {$config_out .= "if " . $c->returnValue("filter $id if") . " ";}
+    if ($c->returnValue("filter $id action") ne "" ) {$config_out .= $c->returnValue("filter $id action") . " ";}
+
+    $config_out .= "\n";
+}
 
 my @redistributeIF  = $c->listNodes('redistribute interface');
 foreach my $int (@redistributeIF) {
@@ -89,3 +109,4 @@ if ( $c->returnValue('denydefaultlocal') eq "true" ) { $config_out .= "redistrib
 
 print $fh $config_out;
 close $fh;
+
