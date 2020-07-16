@@ -67,6 +67,21 @@ sudo mkdir  -p /config/data/install-packages
     - first-table-number
     - import-table
     - interface
+        - channel
+        - enable-timestamps
+        - faraway
+        - hello-interval
+        - link-quality
+        - max-rtt-penalty
+        - rfc6126-compatible
+        - rtt-decay
+        - rtt-max
+        - rtt-min
+        - rxcost
+        - split-horizon
+        - type
+        - unicast
+        - update-interval
     - ipv6-subtrees
     - kernel-priority
     - local-path
