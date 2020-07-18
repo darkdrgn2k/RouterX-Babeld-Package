@@ -39,6 +39,7 @@ done
 cd -
 EOF
 
+sudo mkdir -p  /config/scripts/pre-config.d/install-pkgs
 sudo install -o root -g root -m 0755 install-pkgs /config/scripts/pre-config.d/install-pkgs
 rm -rf install-pkgs
 sudo mkdir  -p /config/data/install-packages
