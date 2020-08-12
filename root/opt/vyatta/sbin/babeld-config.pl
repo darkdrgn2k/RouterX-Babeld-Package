@@ -32,7 +32,7 @@ if ($c->returnValue("random-id") ne "" ) {$config_out .= "random-id " . $c->retu
 if ($c->returnValue("ipv6-subtrees") ne "" ) {$config_out .= "ipv6-subtrees " . $c->returnValue("ipv6-subtrees")  . "\n"; }
 if ($c->returnValue("debug") ne "" ) {$config_out .= "debug " . $c->returnValue("debug")  . "\n"; }
 if ($c->returnValue("local-port") ne "" ) {$config_out .= "local-port " . $c->returnValue("local-port")  . "\n"; }
-if ($c->returnValue("local-port-readwrite") ne "" ) {$config_out .= "local-port-readwrite"  . $c->returnValue("local-port-readwrite")  . "\n"; }
+if ($c->returnValue("local-port-readwrite") ne "" ) {$config_out .= "local-port-readwrite "  . $c->returnValue("local-port-readwrite")  . "\n"; }
 if ($c->returnValue("local-path") ne "" ) {$config_out .= "local-path " . $c->returnValue("local-path")  . "\n"; }
 if ($c->returnValue("local-path-readwrite") ne "" ) {$config_out .= "local-path-readwrite " . $c->returnValue("local-path-readwrite")  . "\n"; }
 if ($c->returnValue("export-table") ne "" ) {$config_out .= "export-table " . $c->returnValue("export-table")  . "\n"; }
@@ -110,3 +110,6 @@ if ( $c->returnValue('denydefaultlocal') eq "true" ) { $config_out .= "redistrib
 print $fh $config_out;
 close $fh;
 
+# Restart babeld
+system("/etc/init.d/babeld stop >&/dev/null");
+system("/etc/init.d/babeld start >&/dev/null");
