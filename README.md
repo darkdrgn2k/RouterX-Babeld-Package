@@ -39,7 +39,7 @@ done
 cd -
 EOF
 
-sudo mkdir -p  /config/scripts/pre-config.d/install-pkgs
+sudo mkdir -p  /config/scripts/pre-config.d
 sudo install -o root -g root -m 0755 install-pkgs /config/scripts/pre-config.d/install-pkgs
 rm -rf install-pkgs
 sudo mkdir  -p /config/data/install-packages
@@ -55,6 +55,7 @@ sudo mkdir  -p /config/data/install-packages
 - [x] Package into working DEB
 - [x] Presist across firmware upgrade
 - [x] Presist config across upgrades
+- [ ] Remove config on delete
 
 ## Configs added
     - denydefault
